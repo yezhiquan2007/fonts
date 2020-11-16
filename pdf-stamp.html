@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- default(white), black, black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-title" content="Foxit PDF SDK for Web">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="750">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <title>Foxit PDF SDK for Web</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <style>
+        body {
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+        }
+        #pdf-ui {
+            top: 20px;
+            bottom: 0;
+            position: absolute;
+            width: 100vw;
+        }
+
+        .fv__ui-toolbar .fv__ui-tab-nav {
+            margin-left: 266px;
+        }
+        .fv__ui-gtab-item-text {
+            color: white;
+        }
+        .fv__ui-gtab-item.active .fv__ui-gtab-item-text {
+            color: #636363;
+        }
+        .fv__ui-mobile #pdf-ui {
+            top: 0;
+        }
+        .fv__ui-mobile .fv__ui-nav
+        {
+            display: none;
+        }
+        
+    </style>
+    <script src="/adaptive.js"> </script>
+    <script src='http://localhost:8080/unittest/mocha.js'> </script>
+    <script src='http://localhost:8080/unittest/chai.js'> </script>
+    <script src='http://localhost:8080/unittest/chai-spies.js'> </script>
+    <script src='http://localhost:8080/unittest/eventually.js'> </script>
+    <script>
+        mocha.setup ('bdd');
+        window.expect = chai.expect;
+        window.spy = chai.spy;
+    </script>
+</head>
+
+<body>
+    
+    <div class="fv__ui-nav">
+        <a class="fv__ui-nav-logo" href="javascript:location.reload()">
+            <i class="fv__icon-logo"></i>
+        </a>
+    </div>
+    <div id="pdf-ui"></div>
+    
+</body>
+
+</html>
